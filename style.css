@@ -1,0 +1,238 @@
+/***************************Default Settings****************************/
+:root {
+  --color-primary: #5ec576;
+  --color-secondary: #ffcb03;
+  --color-tertiary: #ff585f;
+  --color-primary-darker: #4bbb7d;
+  --color-secondary-darker: #ffbb00;
+  --color-tertiary-darker: #fd424b;
+  --color-primary-opacity: #5ec5763a;
+  --color-secondary-opacity: #ffcd0331;
+  --color-tertiary-opacity: #ff58602d;
+  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
+  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+  --gradient-tertiary: linear-gradient(to top left, #085dff, #48b6ff);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif, Arial, Helvetica;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+section {
+  width: 100%;
+  display: flex;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
+
+/* ############################# Section-1 (HEADER) ############################# */
+
+#header {
+  width: 80%;
+  height: 100vh;
+  background-image: url("./Images/pic1.png");
+  background-size: cover;
+  background-position: center;
+  margin-top: 10%;
+}
+
+.container {
+  padding: 30px 8%;
+}
+.container .highlightText {
+  margin-left: 9rem;
+}
+.container h1 {
+  margin-top: 25px;
+  font-size: 50px;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------------- nav Bar ---------------- */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  float: right;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.3rem;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+nav ul li a:hover::after {
+  width: 90%;
+}
+
+/* ---------------- Highlighted Fields ---------------- */
+.highlight {
+  position: relative;
+  z-index: 1; /* Ensure the highlight content is above the header background */
+}
+
+.highlight::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  z-index: -1;
+  opacity: 0.7;
+  transform: scale(1.1, 1.1) skewX(-15deg);
+  background-image: var(--gradient-primary);
+}
+
+.headerText {
+  margin-top: 25%;
+  font-size: 20px;
+}
+
+.headerText h1 {
+  margin-top: 40px;
+  font-size: 30px;
+}
+
+.headerText h1 span {
+  color: var(--color-primary-darker);
+}
+
+/* ############################# Section-2 (ABOUT) ############################# */
+
+#about {
+  padding: 80px 0;
+  color: var(--color-primary);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.aboutCol1 {
+  flex-basis: 35%;
+}
+.aboutCol1 img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.aboutCol2 {
+  flex-basis: 60%;
+}
+
+.subTitle {
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.tabTitles {
+  display: flex;
+  margin: 30px 0 40px;
+}
+
+.tabLinks {
+  margin-right: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.tabLinks::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: var(--color-primary-darker);
+  left: 0;
+  position: absolute;
+  bottom: -9px;
+  transition: 0.6s;
+}
+
+.tabLinks.activeLink::after {
+  width: 80%;
+}
+
+.tabContent ul li {
+  list-style: none;
+  margin: 10px;
+  line-height: 25px;
+}
+
+.tabContent ul li span {
+  color: var(--color-primary);
+  font-size: 18px;
+}
+
+.tabContent {
+  display: none;
+}
+.tabContent.activeTab {
+  display: block;
+}
