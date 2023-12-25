@@ -544,23 +544,113 @@ nav .fas {
 /* ############################# Media Query for Responsive Design ############################# */
 /***************************Default Settings****************************/
 
-/* ############################# Media Query for Large Screens ############################# */
-@media only screen and (max-width: 1200px) {
-}
-
 /* ############################# Media Query for Medium Screens ############################# */
-@media only screen and (max-width: 880px) {
+@media only screen and (max-width: 1100px) {
+  .headerText h1 {
+    font-size: 18px;
+    margin: 10px 0;
+    padding: 10px 0;
+  }
+
   #header {
-    background-image: url("./Images/pic4.jpg");
+    background-image: url("./Images/pic5.jpg");
   }
 
   .headerText {
     margin-top: 80%;
+    font-size: 18px;
+  }
+
+  .container h1 {
+    margin-top: 15px;
+    font-size: 40px;
+  }
+
+  .container .highlightText {
+    margin-left: 5rem;
+    display: flex;
+    margin-top: 20px;
+  }
+  .container .highlightText i {
+    padding-right: 12px;
+  }
+
+  nav .fas {
+    display: block;
+    font-size: 25px;
+  }
+
+  nav ul {
+    background: rgb(120, 120, 120);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 5;
+    transition: 0.65s;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+
+  nav ul .fas {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+
+  .subTitle {
+    font-size: 30px;
+    width: 100%;
+  }
+
+  .aboutCol1,
+  .aboutCol2 {
+    flex-basis: 100%;
+  }
+
+  .aboutCol1 {
+    margin-bottom: 15px;
+  }
+
+  .aboutCol2 {
     font-size: 16px;
   }
 
-  .headerText h1 {
-    font-size: 30px;
+  .tabLinks {
+    font-size: 16px;
+    margin-right: 30px;
+  }
+
+  .contactLeft,
+  .contactRight {
+    flex-basis: 100%;
+  }
+
+  .copyright {
+    font-size: 16px;
+  }
+
+  .btn {
+    display: flex;
+    padding: 10px 40px;
+  }
+
+  form .btn2 {
+    padding: 10px 40px;
+    font-size: 18px;
+  }
+
+  .formButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -658,5 +748,21 @@ nav .fas {
 
   .copyright {
     font-size: 16px;
+  }
+
+  .btn {
+    display: flex;
+    padding: 10px 40px;
+  }
+
+  form .btn2 {
+    padding: 10px 40px;
+    font-size: 18px;
+  }
+
+  .formButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
