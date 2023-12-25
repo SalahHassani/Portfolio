@@ -26,3 +26,18 @@ function handleTabs(e) {
 
   document.querySelector(`#${id}`).classList.add("activeTab");
 }
+
+const menuBar = document.querySelector(".navIt");
+const nav = document.querySelector(".navIt nav ul");
+
+menuBar.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  if (!e.target.closest(".fas")) return;
+
+  if (e.target.closest(".fas2")) {
+    console.log("hiii");
+    nav.style.width = "250px";
+  }
+  if (e.target.closest(".fas1")) nav.style.width = "0";
+});

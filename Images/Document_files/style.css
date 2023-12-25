@@ -1,0 +1,948 @@
+/***************************Default Settings****************************/
+:root {
+  --color-primary: #5ec576;
+  --color-secondary: #ffcb03;
+  --color-tertiary: #ff585f;
+  --color-primary-darker: #4bbb7d;
+  --color-secondary-darker: #ffbb00;
+  --color-tertiary-darker: #fd424b;
+  --color-primary-opacity: #5ec5763a;
+  --color-secondary-opacity: #ffcd0331;
+  --color-tertiary-opacity: #ff58602d;
+  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
+  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+  --gradient-tertiary: linear-gradient(to top left, #085dff, #48b6ff);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family: "Poppins", sans-serif, Arial, Helvetica; */
+}
+
+body {
+  background-image: url("./images/bg4.jpg");
+  overflow-x: hidden;
+  background-color: #ffffff;
+  color: #000;
+  font-family: sans-serif, "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
+  font-size: large;
+  background-size: 100% auto; /* Set background size to cover horizontally and maintain original size vertically */
+  /* background-repeat: no-repeat; Prevent the background image from repeating */
+}
+
+section {
+  width: 100%;
+  display: flex;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
+
+/* ############################# (Menu Bar) ############################# */
+nav.primary-navigation {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  padding: 60px 0 0 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: arvo;
+}
+
+nav.primary-navigation ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav.primary-navigation li {
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+}
+
+nav.primary-navigation li.toLeft {
+  float: left;
+}
+
+nav.primary-navigation li.toRight {
+  float: right;
+  border-left: 2px solid #3ca0e7; /* Add border only on the right side of SignUp */
+}
+
+nav.primary-navigation li.forLineBar {
+  border-right: 2px solid #3ca0e7;
+}
+
+nav.primary-navigation li a {
+  color: black;
+  /* display: block; */
+  padding: 0 15px;
+  text-decoration: none;
+}
+
+nav.primary-navigation li a:hover {
+  color: #3ca0e7;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    color: #3ca0e7;
+  }
+}
+
+/* ############################# (Intro) ############################# */
+.MainTitle {
+  width: 100%;
+  text-align: center;
+  margin: 2%;
+  overflow: hidden;
+}
+
+.MainTitle h1 {
+  text-align: center;
+  margin: 5%;
+}
+
+.introduction {
+  font-size: larger;
+  display: flex;
+  width: 90%;
+  flex-wrap: wrap;
+  overflow: hidden;
+  text-align: justify;
+}
+
+.introduction .intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  opacity: 0.95;
+  border-radius: 14px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.introduction .intro p {
+  padding: 3%;
+}
+
+.introduction img {
+  width: 80%;
+}
+
+/* ---------------- Highlighted Fields ---------------- */
+.highlight {
+  position: relative;
+  /* z-index: 1; */
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.highlight::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  z-index: -1;
+  opacity: 0.8;
+  transform: scale(1.2, 1.2) skewX(-16deg);
+  background: var(--gradient-primary);
+}
+
+/* ############################# (CARD) ############################# */
+
+.cardContainer {
+  margin: 5% 10%;
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  flex-direction: row; /* Set the main axis to be horizontal */
+}
+
+.card {
+  font-size: 20px;
+  font-style: oblique;
+  font-weight: 700;
+  display: block;
+  width: 240px;
+  height: 420px;
+  display: grid;
+  /* gap: 5px; */
+  color: #000;
+  grid-template-rows: 50% 35% 15%; /* Set the desired heights for each row */
+  grid-template-columns: 1fr; /* 1 column */
+  margin: 20px 3px;
+  border-radius: 10px;
+  /* overflow: hidden; */
+  cursor: pointer;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.card:hover {
+  transform: scale(0.97);
+}
+
+.card:hover {
+  .pokemonCardImage img {
+    transform: scale(1.25) translateY(-35px);
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
+  }
+}
+
+.pokemonCardImage img {
+  /* background-color: #e1e184; */
+  /* background: linear-gradient(#e1e184, #f9e667); */
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.pokemoneCardData h3 {
+  color: var(--color-primary-darker);
+}
+
+.card .cardRow:not(.pokemoneCardData) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokemoneCardPrice {
+  background: var(--color-primary-darker);
+  /* border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px; */
+}
+
+.pokemoneCardData {
+  padding: 5px 0;
+  background: #fff;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 40% 35% 30%;
+}
+
+.pokemoneCardPrice img,
+.pokemoneCardData img {
+  width: 26px;
+  padding-right: 3px;
+  margin-bottom: -6px;
+}
+
+.pokemoneName,
+.pokemoneType,
+.pokemoneStatus {
+  padding: 10px; /* Add padding for better visibility */
+}
+
+.pokemoneStatus {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pokemoneStatus div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 33%;
+}
+
+.hidden {
+  display: none;
+}
+
+.electric {
+  background: linear-gradient(#e1e184, #f9e667);
+}
+.fire {
+  background: linear-gradient(to bottom, #ffac33, #ff4040);
+}
+.grass {
+  background: linear-gradient(to bottom, #78c850, #4e8234);
+}
+.water {
+  background: linear-gradient(to bottom, #76b8d4, #2c699f);
+}
+.bug {
+  background: linear-gradient(to bottom, #c59d6f, #8b6b38);
+}
+.normal {
+  background: linear-gradient(to bottom, #c0c0c0, #e2e0e0);
+}
+.poison {
+  background: linear-gradient(to bottom, #a246ae, #e876f7);
+}
+
+/* ############################# (SignIn Form) ############################# */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #ffffff;
+  padding: 30px;
+  width: 450px;
+  border-radius: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+::placeholder {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.form button {
+  align-self: flex-end;
+}
+
+.flex-column > label {
+  color: #151717;
+  font-weight: 600;
+}
+
+.inputForm {
+  border: 1.5px solid #ecedec;
+  border-radius: 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  transition: 0.2s ease-in-out;
+}
+
+.signUpForm input {
+  border: 1.5px solid #ecedec;
+  border-radius: 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  transition: 0.2s ease-in-out;
+}
+
+.input {
+  margin-left: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 85%;
+  height: 100%;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.inputForm:focus-within {
+  border: 1.5px solid #2d79f3;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.flex-row > div > label {
+  font-size: 14px;
+  color: black;
+  font-weight: 400;
+}
+
+.span {
+  font-size: 14px;
+  margin-left: 5px;
+  color: #2d79f3;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.button-submit {
+  margin: 20px 0 10px 0;
+  background-color: #151717;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 10px;
+  height: 50px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.button-submit:hover {
+  background-color: #252727;
+}
+
+.p {
+  text-align: center;
+  color: black;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.btn {
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  gap: 10px;
+  border: 1px solid #ededef;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+  border: 1px solid #2d79f3;
+}
+
+/* ############################# (ShowCardDetails) ############################# */
+
+.pokemonDetails {
+  width: 100%;
+  height: 100%;
+  box-shadow: 1px 2px 1px rgba(0, 0 0, 0.6);
+  overflow: hidden;
+}
+
+.pokemonDetails h2 {
+  color: green;
+}
+
+.electric {
+  background: linear-gradient(#e1e184, #f9e667);
+}
+
+.pokemonName {
+  text-align: center;
+  padding: 20px;
+}
+
+.details {
+  /* height: 50%;
+  width: 100%; */
+  display: flex;
+}
+
+.details div {
+  margin: 2%;
+}
+
+.pokemonImage {
+  /* padding: 3%; */
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.pokemonImage img {
+  width: 100%;
+  height: 100%;
+  /* width: 300px;
+  height: 300px; */
+}
+
+.description {
+  text-align: center;
+  font-size: 20px;
+}
+
+.extraDetails .status {
+  text-align: center;
+}
+.extraDetails .status h2 {
+  margin-bottom: -20px;
+  margin-top: 30px;
+}
+.extraDetails .status div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  margin: 15px 0px;
+  font-weight: 300;
+  font-size: large;
+}
+/* .extraDetails .status div div {
+
+} */
+
+.type {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.price h2,
+.type div {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 20px;
+}
+
+.price {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.type img,
+.price img {
+  width: 35px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+}
+
+.status img {
+  width: 30px;
+  padding-left: 10px;
+}
+
+#container {
+  font-size: 24px;
+  font-weight: 300;
+  width: 80%;
+  margin: 50px auto;
+  padding: 20px;
+  /* border: 1px solid #ccc; */
+  text-align: center;
+}
+
+#loginMessage {
+  margin-bottom: 20px;
+}
+
+#signInLink,
+#signUpLink {
+  margin-top: 10px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+#signUpLink {
+  border-left: 1px solid rgb(152, 152, 152);
+}
+
+.SignInAndSignUp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.SignInAndSignUp a {
+  padding: 10px;
+}
+
+#signInLink:hover,
+#signUpLink:hover {
+  color: #28a745;
+}
+
+/*------------------------ After SignIn ------------------------*/
+.isAvailable {
+  width: 70%;
+  margin: 20px auto;
+  padding: 10px;
+  text-align: center;
+  border-radius: 1.2rem;
+  /* background: linear-gradient(rgb(30, 137, 30), rgb(0, 255, 26)); */
+  background: var(--gradient-primary);
+  /* var(--gradient-primary); */
+}
+
+.isAvailable h1 {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+#container2 {
+  display: flex;
+  font-size: 24px;
+  font-weight: 300;
+  width: 80%;
+  margin: 10px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+#container2 .currentOnwer {
+  display: flex;
+  flex-direction: column;
+}
+
+#container2 .isOpenToTrade .offerTitle {
+  display: block;
+  margin: 14px;
+  background: var(--color-primary-darker);
+  justify-content: space-between;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: var(--color-primary);
+  padding: 16px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+#container2 .isOpenToTrade .handleBtns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#container2 .currentOnwer .nameAndPic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: var(--color-primary);
+  padding: 4px 20px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+#container2 .currentOnwer .nameAndPic .profileIcon {
+  margin-right: 1em;
+}
+
+#container2 .currentOnwer div {
+  margin: 0.5em 1em;
+  text-align: justify;
+  display: flex;
+  justify-content: space-between;
+}
+
+#container2 .currentOnwer div span {
+  margin-right: auto;
+}
+
+#container2 .currentOnwer div .lastCardOnwer span,
+#container2 .currentOnwer div .rating span {
+  margin-right: 0;
+}
+
+#container2 .currentOnwer .nameAndPic .profileIcon img {
+  width: 50%;
+  background-color: #f7fbfe;
+  border-radius: 50%;
+}
+
+.btn {
+  /* display: inline-block; */
+  /* width: 90%; */
+  padding: 10px 10px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin: 20px auto;
+  padding: 15px 50px; */
+  border-radius: 7px;
+  border: none !important;
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--color-primary);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: transform 0.8s;
+}
+
+.btn:hover {
+  /* background: #4bbb7d; */
+  transform: translateY(-7px);
+  background: var(--gradient-primary);
+}
+
+.btnIcon i {
+  font-size: 20px;
+  margin-left: 5px;
+  color: #fff !important;
+}
+
+/* ############################# (Create a card) ############################# */
+
+/* Style the form */
+#createCardForm {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  /* border: 1px solid #3498db; */
+  border-radius: 8px;
+  background-color: #ecf0f1;
+  box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Style form inputs */
+#createCardForm input[type="text"],
+#createCardForm input[type="number"],
+#createCardForm textarea {
+  width: 96%;
+  padding: 14px;
+  margin-bottom: 10px;
+  border: 1px solid #bfc2c4;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  color: #000000;
+}
+
+/* Style radio buttons in one line */
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px;
+}
+
+#createCardForm input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Style form button */
+#createCardForm button {
+  padding: 12px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 20px;
+  width: 100%;
+}
+
+/* Style button on hover */
+#createCardForm button:hover {
+  background-color: #2980b9;
+}
+
+.CreateCardType,
+.CreateCardTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CreateCardTitle {
+  margin: 20px;
+}
+
+/* ############################# (Profile) ############################# */
+
+#profile {
+  width: 50%;
+  height: 80vh;
+  margin: 50px;
+  border-radius: 14px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+#profile .profileBox {
+  height: 25%;
+  background-color: black;
+  position: relative;
+}
+
+#profile .profileDetails {
+  position: absolute;
+  bottom: 0;
+  left: 4%; /* You can adjust left, right, or center as per your design */
+  display: flex;
+  margin-bottom: -80px;
+  color: #fff;
+}
+
+#profile .imgBox {
+  width: 120px;
+  height: 120px;
+  background-color: #fff;
+  overflow: hidden;
+  padding: 5px;
+  border: 2px solid rgb(214, 212, 212);
+  border-radius: 4px;
+}
+
+#profile .imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#profile .editImg div {
+  margin: 10px 0;
+}
+
+#profile .editImg .profileBtn {
+  color: #000;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  padding: 10px 0;
+  border: 1px solid gray;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+#profile .profileBtn:hover {
+  background: #000000;
+  color: #fff;
+}
+
+#profile .profileDetails div {
+  margin-right: 15px;
+}
+
+#profile .nameAndEmail div {
+  margin-top: 0px;
+}
+
+#profile .nameAndEmail {
+  margin-top: 45px;
+}
+
+#logoutAndSettings {
+  /* margin-top: 10px; */
+  height: 10%;
+  width: 100%;
+  background-color: #ececec;
+  /* border: 1px solid black; */
+}
+#logoutAndSettings div {
+  height: 100%;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+#logoutAndSettings div a {
+  text-decoration: none;
+  font-size: larger;
+  color: rgb(162, 166, 170);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+#logoutAndSettings div a:hover {
+  color: rgb(188, 188, 188);
+}
+
+#currentCards {
+  height: 65%;
+  width: 100%;
+  padding-top: 15px;
+  background-color: #fff;
+}
+
+#currentCards .CardBoxtitle {
+  height: 10%;
+}
+
+#currentCards .cardBox {
+  height: 90%;
+}
+
+#currentCards div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ############################# (Overlay bg) ############################# */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 70%; */
+  margin: auto;
+  background-color: white;
+  /* padding: 6rem; */
+  border-radius: 0.5rem;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.modal i {
+  float: right;
+  font-size: 22px;
+  padding: 10px 20px;
+  color: #928e8e;
+  font-weight: 0;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
