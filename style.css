@@ -25,7 +25,7 @@ html {
 }
 
 body {
-  background-image: url("./Images/pic6.webp");
+  background-image: url("./Images/pic6.jpg");
   overflow-x: hidden;
   background-color: #000;
   color: #fff;
@@ -72,6 +72,12 @@ section {
 }
 .col-12 {
   width: 100%;
+}
+
+.hidden {
+  display: none;
+  /* top: 10;
+  left: 10; */
 }
 
 /* ############################# Section-1 (HEADER) ############################# */
@@ -169,9 +175,11 @@ nav ul li a:hover::after {
 
 .sticky {
   position: fixed;
-  /* background-color: rgba(255, 255, 255, 0.95); */
-  /* width: 100%; */
-  z-index: 1;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  background: var(--color-primary-opacity);
+  z-index: 2;
 }
 
 /* ---------------- Highlighted Fields ---------------- */
@@ -663,6 +671,10 @@ nav .fas {
     align-items: center;
     justify-content: center;
   }
+
+  .sticky {
+    display: block;
+  }
 }
 
 /* ############################# Media Query for Small Screens ############################# */
@@ -674,7 +686,7 @@ nav .fas {
   }
 
   #header {
-    background-image: url("./Images/pic4.jpg");
+    background-image: url("./Images/mbl4.jpg");
   }
 
   .headerText {
@@ -706,7 +718,7 @@ nav .fas {
   }
 
   nav ul {
-    background: var(--color-primary-darker);
+    background: rgb(68, 74, 81);
     position: fixed;
     top: 0;
     right: 0;
@@ -775,5 +787,9 @@ nav .fas {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .sticky {
+    display: inline-block;
   }
 }

@@ -36,10 +36,15 @@ menuBar.addEventListener("click", function (e) {
   if (!e.target.closest(".fas")) return;
 
   if (e.target.closest(".fas2")) {
-    console.log("hiii");
     nav.style.width = "250px";
+    // e.target.classList.add("hidden");
+    console.log(e.target.getAttribute("class"));
+  } else {
+    nav.style.width = "0";
+    // e.target.classList.remove("hidden");
   }
-  if (e.target.closest(".fas1")) nav.style.width = "0";
+
+  // if (e.target.closest(".fas1"))
 });
 
 let activeMenuItem = document.querySelector(".activeBar");
@@ -66,45 +71,59 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// // Sticky navigation
-// const navBar = document.querySelector(".navIt");
+// Sticky navigation
+const navBar = document.querySelector(".navIt");
 
-// const about = document.querySelector("#about2");
-// const header = document.querySelector("#header");
-// const portfolio = document.querySelector("#portfolio");
-// const contact = document.querySelector("#contact");
-// const services = document.querySelector("#services");
+const about = document.querySelector("#about2");
+const header = document.querySelector("#header");
+const portfolio = document.querySelector("#portfolio");
+const contact = document.querySelector("#contact");
+const services = document.querySelector("#services");
 
-// const initialCoordsOfAbout = about.getBoundingClientRect();
-// const initialCoordsOfServices = services.getBoundingClientRect();
-// const initialCoordsOfPortfolio = portfolio.getBoundingClientRect();
-// const initialCoordsOfContact = contact.getBoundingClientRect();
-// const initialCoordsOfHeader = header.getBoundingClientRect();
+const about2 = document.querySelector(".aboutNav");
+const header2 = document.querySelector(".headerNav");
+const portfolio2 = document.querySelector(".protfolioNav");
+const contact2 = document.querySelector(".contactNav");
+const services2 = document.querySelector(".servicesNav");
 
-// window.addEventListener("scroll", function () {
-//   if (window.scrollY > initialCoordsOfAbout.top) {
-//     console.log("hi");
-//     nav.classList.add("sticky");
-//     activeMenuItem.classList.remove("activeBar");
-//     about.classList.add("activeBar");
-//     activeMenuItem = document.querySelector(".activeBar");
-//   } else nav.classList.remove("sticky");
+const initialCoordsOfAbout = about.getBoundingClientRect();
+const initialCoordsOfServices = services.getBoundingClientRect();
+const initialCoordsOfPortfolio = portfolio.getBoundingClientRect();
+const initialCoordsOfContact = contact.getBoundingClientRect();
+const initialCoordsOfHeader = header.getBoundingClientRect();
 
-//   if (window.scrollY > initialCoordsOfServices.top) {
-//     activeMenuItem.classList.remove("activeBar");
-//     services.classList.add("activeBar");
-//     activeMenuItem = document.querySelector(".activeBar");
-//   }
+function handleStickyMenu(item) {
+  activeMenuItem.classList.remove("activeBar");
+  item.classList.add("activeBar");
+  activeMenuItem = document.querySelector(".activeBar");
+}
 
-//   if (window.scrollY > initialCoordsOfPortfolio.top) {
-//     activeMenuItem.classList.remove("activeBar");
-//     portfolio.classList.add("activeBar");
-//     activeMenuItem = document.querySelector(".activeBar");
-//   }
+window.addEventListener("scroll", function () {
+  if (window.scrollY < initialCoordsOfHeader.bottom) {
+    navBar.classList.add("navIt");
+    navBar.classList.remove("sticky");
 
-//   if (window.scrollY > initialCoordsOfContact.top) {
-//     activeMenuItem.classList.remove("activeBar");
-//     contact.classList.add("activeBar");
-//     activeMenuItem = document.querySelector(".activeBar");
-//   }
-// });
+    handleStickyMenu(header2);
+  }
+  if (window.scrollY > initialCoordsOfAbout.top) {
+    navBar.classList.add("sticky");
+    navBar.classList.remove("navIt");
+
+    handleStickyMenu(about2);
+  } else {
+    navBar.classList.add("navIt");
+    navBar.classList.remove("sticky");
+  }
+
+  if (window.scrollY > initialCoordsOfServices.top) {
+    handleStickyMenu(services2);
+  }
+
+  if (window.scrollY > initialCoordsOfPortfolio.top) {
+    handleStickyMenu(portfolio2);
+  }
+
+  if (window.scrollY > initialCoordsOfContact.top) {
+    handleStickyMenu(contact2);
+  }
+});
