@@ -12,7 +12,6 @@
   </head>
   <body>
     <!-- HEADER -->
-    <!-- <section> -->
     <div class="intro">
       <div class="container col-12" id="header">
         <div class="navBar">
@@ -20,19 +19,19 @@
             <h1><span class="highlight">Salah Uddin</span></h1>
             <h1>
               <span class="highlight highlightText"
-                ><i class="fa-brands fa-phoenix-framework"></i> Hassani</span
-              >
+                ><i class="fa-brands fa-phoenix-framework"></i> Hassani
+              </span>
             </h1>
           </div>
           <div class="navIt">
             <nav>
               <ul>
-                <li><a href="#" class="activeBar">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">SERVICES</a></li>
-                <li><a href="#">PORTFOLIO</a></li>
-                <li><a href="#">CONTACT</a></li>
-                <i class="fas fas1 fa-solid fa-xmark"></i>
+                <li><a href="#header" class="activeBar headerNav">HOME</a></li>
+                <li><a href="#about2" class="aboutNav">ABOUT</a></li>
+                <li><a href="#services" class="servicesNav">SERVICES</a></li>
+                <li><a href="#portfolio" class="protfolioNav">PORTFOLIO</a></li>
+                <li><a href="#contact" class="contactNav">CONTACT</a></li>
+                <li><i class="fas fas1 fa-solid fa-xmark"></i></li>
               </ul>
               <i class="fas fas2 fa-solid fa-bars"></i>
             </nav>
@@ -47,18 +46,11 @@
         </div>
       </div>
     </div>
-    <!-- <div class="col-6 container">
 
-      </div> -->
-    <!-- </section> -->
-
-    <!-- ABOUT -->
-    <!-- <section> -->
-    <div class="about">
+    <div class="about" id="about2">
       <div class="container">
         <div class="row">
           <div class="aboutCol1">
-            <!-- <img src="./Images/pic1.png" alt="no image found" /> -->
             <img src="./Images/profile.jpg" alt="no image found" />
           </div>
           <div class="aboutCol2">
@@ -137,10 +129,8 @@
         </div>
       </div>
     </div>
-    <!-- </section> -->
 
     <!-- SERVICES -->
-
     <div id="services">
       <div class="container">
         <h1 class="subTitle">My services</h1>
@@ -194,11 +184,15 @@
           <div class="work">
             <img src="./Images/pic3.webp" alt="no image" />
             <div class="layer">
-              <h3>Al-noor Restaurant</h3>
+              <h3>js_project ELTE</h3>
               <p>
                 jkfsdfjsdlfajfsjhlsdhkdfasjlfdsfhldfasdjldfsfgjhfasdfa;fjdjs
               </p>
-              <a href="#"><i class="fa-solid fa-link"></i></a>
+              <a
+                href="https://github.com/SalahHassani/jsProject_Uni/"
+                target="_blank"
+                ><i class="fa-solid fa-link"></i
+              ></a>
             </div>
           </div>
           <div class="work">
@@ -243,7 +237,7 @@
             </div>
           </div>
           <div class="contactRight">
-            <form action="">
+            <form>
               <input type="text" name="Name" placeholder="Your Name" />
               <input type="email" name="email" placeholder="Your email" />
               <textarea
