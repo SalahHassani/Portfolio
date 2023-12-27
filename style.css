@@ -766,7 +766,8 @@ nav .fas {
 
   .contactLeft,
   .contactRight {
-    flex-basis: 100%;
+    /* flex-basis: 100%; */
+    width: 100%;
   }
 
   .copyright {
